@@ -149,7 +149,7 @@
     },
     {
         "command": "editor.action.commentLine",
-        "key": "cmd+[Slash]",
+        "key": "ctrl+]",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
@@ -1270,11 +1270,6 @@
     {
         "command": "-editor.action.addSelectionToNextFindMatch",
         "key": "ctrl+g"
-  },
-  {
-      "key": "ctrl+shift+]",
-      "command": "editor.action.addCommentLine",
-      "when": "editorTextFocus && !editorReadonly"
   },
   {
       "key": "cmd+k cmd+c",
