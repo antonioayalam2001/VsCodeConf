@@ -643,11 +643,6 @@
         "when": "inQuickOpen"
     },
     {
-        "command": "editor.action.formatDocument",
-        "key": "cmd+alt+l",
-        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-    },
-    {
         "command": "editor.action.rename",
         "key": "shift+f6",
         "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
@@ -1148,10 +1143,6 @@
         "key": ""
     },
     {
-        "command": "-editor.action.formatDocument",
-        "key": "shift+alt+f"
-    },
-    {
         "command": "-editor.action.rename",
         "key": "f2"
     },
@@ -1270,113 +1261,159 @@
     {
         "command": "-editor.action.addSelectionToNextFindMatch",
         "key": "ctrl+g"
-  },
-  {
-      "key": "cmd+k cmd+c",
-      "command": "-editor.action.addCommentLine",
-      "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-      "key": "ctrl+alt+up",
-      "command": "editor.action.insertCursorAbove",
-      "when": "editorTextFocus"
-  },
-  {
-      "key": "alt+cmd+up",
-      "command": "-editor.action.insertCursorAbove",
-      "when": "editorTextFocus"
-  },
-  {
-      "key": "ctrl+alt+down",
-      "command": "editor.action.insertCursorBelow",
-      "when": "editorTextFocus"
-  },
-  {
-      "key": "alt+cmd+down",
-      "command": "-editor.action.insertCursorBelow",
-      "when": "editorTextFocus"
-  },
-  {
-      "key": "ctrl+[IntlBackslash]",
-      "command": "workbench.action.splitEditor"
-  },
-  {
-      "key": "ctrl+alt+cmd+[Minus]",
-      "command": "-workbench.action.splitEditor"
-  },
-  {
-      "key": "cmd+up",
-      "command": "-notebook.focusTop",
-      "when": "notebookEditorFocused && !inputFocus"
-  },
-  {
-      "key": "alt+1",
-      "command": "workbench.action.focusFirstEditorGroup"
-  },
-  {
-      "key": "cmd+1",
-      "command": "-workbench.action.focusFirstEditorGroup"
-  },
-  {
-      "key": "alt+2",
-      "command": "workbench.action.focusSecondEditorGroup"
-  },
-  {
-      "key": "cmd+2",
-      "command": "-workbench.action.focusSecondEditorGroup"
-  },
-  {
-      "key": "cmd+1",
-      "command": "workbench.view.explorer",
-      "when": "editorFocus && viewContainer.workbench.view.explorer.enabled"
-  },
-  {
-      "key": "cmd+numpad1",
-      "command": "-workbench.view.explorer",
-      "when": "editorFocus && viewContainer.workbench.view.explorer.enabled"
-  },
-  {
-      "key": "cmd+1",
-      "command": "workbench.view.explorer",
-      "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  {
-      "key": "shift+cmd+e",
-      "command": "-workbench.view.explorer",
-      "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  {
-      "key": "alt+r",
-      "command": "renameFile",
-      "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-      "key": "enter",
-      "command": "-renameFile",
-      "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-      "key": "alt+cmd+t",
-      "command": "-workbench.action.closeOtherEditors"
-  },
-  {
-      "key": "alt+cmd+t",
-      "command": "workbench.action.terminal.focus",
-      "when": "terminalHasBeenCreated && !terminalFocus || terminalProcessSupported && !terminalFocus"
-  },
-  {
-      "key": "alt+f12",
-      "command": "-workbench.action.terminal.focus",
-      "when": "terminalHasBeenCreated && !terminalFocus || terminalProcessSupported && !terminalFocus"
-  },
-  {
-      "key": "ctrl+[Semicolon]",
-      "command": "workbench.action.terminal.toggleTerminal",
-      "when": "terminal.active"
-  },
-  {
-      "key": "shift+escape",
-      "command": "-workbench.action.terminal.toggleTerminal",
-      "when": "terminal.active"
-  }
-  ]
+    },
+    {
+        "key": "cmd+k cmd+c",
+        "command": "-editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+up",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+[IntlBackslash]",
+        "command": "workbench.action.splitEditor"
+    },
+    {
+        "key": "ctrl+alt+cmd+[Minus]",
+        "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "cmd+up",
+        "command": "-notebook.focusTop",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "alt+1",
+        "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "cmd+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "alt+2",
+        "command": "workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "cmd+2",
+        "command": "-workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.view.explorer",
+        "when": "editorFocus && viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+        "key": "cmd+numpad1",
+        "command": "-workbench.view.explorer",
+        "when": "editorFocus && viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+        "key": "shift+cmd+e",
+        "command": "-workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+        "key": "alt+r",
+        "command": "renameFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "alt+cmd+t",
+        "command": "-workbench.action.closeOtherEditors"
+    },
+    {
+        "key": "alt+cmd+t",
+        "command": "workbench.action.terminal.focus",
+        "when": "terminalHasBeenCreated && !terminalFocus || terminalProcessSupported && !terminalFocus"
+    },
+    {
+        "key": "alt+f12",
+        "command": "-workbench.action.terminal.focus",
+        "when": "terminalHasBeenCreated && !terminalFocus || terminalProcessSupported && !terminalFocus"
+    },
+    {
+        "key": "ctrl+[Semicolon]",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "shift+escape",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "tab",
+        "command": "editor.action.inlineSuggest.acceptNextWord",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "cmd+right",
+        "command": "-editor.action.inlineSuggest.acceptNextWord",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "cmd+2",
+        "command": "postman-for-vscode.sidebar-panel.focus"
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "-postman-for-vscode.sidebar-panel.focus"
+    },
+    {
+        "key": "cmd+3",
+        "command": "workbench.action.openChat.copilot"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+a",
+        "command": "eslint.executeAutofix"
+    }
+]
